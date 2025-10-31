@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloth Store</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>"Wearly" Store</h1>
+  </header>
+
+  <main>
+    <!-- Section for adding a new cloth -->
+    <section class="add-cloth-section">
+      <h2>Add a New Cloth</h2>
+      <form id="add-cloth-form">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <textarea id="description" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="price">Price:</label>
+          <input type="number" id="price" step="0.01" required>
+        </div>
+        <div class="form-group">
+          <label for="category">Category:</label>
+          <input type="text" id="category" required>
+        </div>
+        <div class="form-group">
+          <label for="image">Image:</label>
+          <input type="text" id="image">
+        </div>
+        <button type="submit">Add Cloth</button>
+      </form>
+    </section>
+
+    <!-- Section for displaying the cloth list -->
+    <section class="cloth-list-section">
+      <h2>Cloth Catalog</h2>
+      <div id="cloth-list" class="cloth-grid">
+        <!-- Cloth cards will be inserted here by JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Wearly</p>
+  </footer>
+
+  <!-- Edit Cloth Modal -->
+  <div id="edit-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Edit Cloth</h2>
+      <form id="edit-cloth-form">
+        <input type="hidden" id="edit-cloth-id">
+        <div class="form-group">
+          <label for="edit-name">Name:</label>
+          <input type="text" id="edit-name" required>
+        </div>
+        <div class="form-group">
+          <label for="edit-description">Description:</label>
+          <textarea id="edit-description" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="edit-price">Price:</label>
+          <input type="number" id="edit-price" step="0.01" required>
+        </div>
+        <div class="form-group">
+          <label for="edit-category">Category:</label>
+          <input type="text" id="edit-category" required>
+        </div>
+        <div class="form-group">
+          <label for="edit-image">Image:</label>
+          <input type="text" id="edit-image">
+        </div>
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Connect our JavaScript file -->
+  <script src="/app.js"></script>
+</body>
+</html>
